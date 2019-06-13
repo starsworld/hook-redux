@@ -17,10 +17,10 @@ function memoizeSingleArg(fn) {
     }
 }
 
-export default function create(mapState) {
+export default function create() {
     const StoreContext = createContext();
 
-    function useMappedState() {
+    function useMappedState(mapState) {
         const store = useContext(StoreContext);
         if (!store) {
             throw new Error('Missing Provider!');

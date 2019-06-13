@@ -1,4 +1,4 @@
-import {INITIAL_STATE} from './Store';
+import {INITIAL_STATE} from './store';
 
 export default function reducer(state = INITIAL_STATE, action) {
     switch (action.type) {

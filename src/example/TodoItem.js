@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+import React, {useCallback} from 'react';
+import {useMappedState} from './store';
 
-function TodoItem() {
+function TodoItem({index}) {
+    const item = useMappedState(
+        useCallback((state) => state.todos[index], [index])
+    );
 
     return (
-        <div>abc</div>
+        <div>{item}</div>
     )
 }
 
